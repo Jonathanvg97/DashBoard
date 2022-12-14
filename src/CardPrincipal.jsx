@@ -1,16 +1,17 @@
 import './CardPrincipal.css'
 import { FaPlay } from "react-icons/fa";
+import { deleteDec, colorDec } from './App'
 
-export default function CardPrincipal() {
+export default function CardPrincipal({ json: { id, symbol, current_price, image,               price_change_percentage_1h_in_currency, price_change_percentage_24h_in_currency, price_change_percentage_7d_in_currency, price_change_percentage_30d_in_currency, price_change_percentage_1y_in_currency }, cur= 'usd'}) {
     return (
         <>
             <article className="cripto-first">
                 <div className="cripto-first">
-                    <img src="" alt="Icono de la cripto" />
+                    <img src={image} alt="Icono de la cripto" />
 
-                    <h2>Nombre de la Cripto - USD - %</h2>
+                    <h2>{symbol} - {current_price} {cur}</h2>
 
-                    <h2><FaPlay/></h2>
+                    <h2><FaPlay className={`icon-arrow ${colorDec(price_change_percentage_30d_in_currency)}`}/>{deleteDec(price_change_percentage_30d_in_currency, 2)}%</h2>
                 </div>
 
                 <div className="graphic">
@@ -24,7 +25,7 @@ export default function CardPrincipal() {
                         <thead>
                             <tr>
                                 <th>1h</th>
-                                <th>23h</th>
+                                <th>24h</th>
                                 <th>7d</th>
                                 <th>1m</th>
                                 <th>1y</th>
@@ -33,11 +34,11 @@ export default function CardPrincipal() {
 
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td className={colorDec(price_change_percentage_1h_in_currency)}>{deleteDec(price_change_percentage_1h_in_currency, 2)} %</td>
+                                <td className={colorDec(price_change_percentage_24h_in_currency)}>{deleteDec(price_change_percentage_24h_in_currency, 2)} %</td>
+                                <td className={colorDec(price_change_percentage_7d_in_currency)}>{deleteDec(price_change_percentage_7d_in_currency, 2)} %</td>
+                                <td className={colorDec(price_change_percentage_30d_in_currency)}>{deleteDec(price_change_percentage_30d_in_currency, 2)} %</td>
+                                <td className={colorDec(price_change_percentage_1y_in_currency)}>{deleteDec(price_change_percentage_1y_in_currency, 2)} %</td>
                             </tr>
                         </tbody>
                     </table>
