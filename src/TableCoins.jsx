@@ -2,7 +2,7 @@ import React from 'react'
 import './TableCoins.css'
 import CoinRow from './CoinRow'
 
-export default function TableCoins() {
+export default function TableCoins({coins}) {
   return (
     <table className='table_coins'>
       <thead>
@@ -18,7 +18,9 @@ export default function TableCoins() {
       </thead>
 
       <tbody>
-        <CoinRow/>
+        {coins.map((coin, index) => (
+          <CoinRow coin={coin} key={index} index={index + 1}/>
+        ))}
       </tbody>
     </table>
   )

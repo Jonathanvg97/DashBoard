@@ -1,5 +1,6 @@
 import './Card.css'
 import {colorDec} from './App'
+import Graph from './Graph'
 
 export default function Card({price, porcentaje, img, coinId, cur}) {
     return (
@@ -11,7 +12,8 @@ export default function Card({price, porcentaje, img, coinId, cur}) {
                     <h2 className={`price ${colorDec(porcentaje)}`}> {price} </h2>
                     <h4 className={`porcentaje ${colorDec(porcentaje)}`}>{porcentaje}%</h4>
                 </div>
-                {/* Grafico */}
+                
+                <Graph coin={coinId} currency={cur} color={colorDec(porcentaje)}/>
             </div>
         </div>
     )
