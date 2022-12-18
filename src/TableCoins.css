@@ -1,8 +1,44 @@
-.table_coins{
-    width: 80%;
-    margin: auto;
-    padding: 30px 30px 80px;
+.table_coins {
+    width: 90%;
+    margin: 50px auto;
 }
-tr{
-    text-align: center;
+
+.table_coins thead {
+    display: none;
+}
+
+.table_coins tr:nth-of-type(2n) {
+    background-color: inherit;
+}
+
+.table_coins tr td:first-child {
+    background: #f0f0f0;
+    font-weight:bold;
+    font-size:1.3em;
+}
+
+.table_coins tbody td {
+    display: block;
+    text-align:center;
+    margin: 10px 0;
+}
+
+.table_coins tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align:center;
+}
+
+@media (min-width: 768px) { 
+    .table_coins{
+        width: 80%;
+        margin: auto;
+        padding: 30px 30px 80px;
+        display: block;
+        overflow-x: auto;
+    }
+    
+    tr{
+        text-align: center;
+    }
 }

@@ -1,5 +1,4 @@
 import './CardPrincipal.css'
-import { FaPlay } from "react-icons/fa";
 import { deleteDec, colorDec } from './App'
 import Graph from './Graph'
 
@@ -7,12 +6,14 @@ export default function CardPrincipal({ json: { id, symbol, current_price, image
     return (
         <>
             <article className="cripto-first">
-                <div className="cripto-first">
+                <div className="cripto-info">
                     <img src={image} alt="Icono de la cripto" />
 
-                    <h2>{symbol} - {current_price} {cur}</h2>
-
-                    <h2><FaPlay className={`icon-arrow ${colorDec(price_change_percentage_30d_in_currency)}`}/>{deleteDec(price_change_percentage_30d_in_currency, 2)}%</h2>
+                    <div className='cripto-title'>
+                        <h2>{symbol} - {current_price} {cur}</h2>
+                        
+                        <h2 className={`porcentaje ${colorDec(price_change_percentage_30d_in_currency)}`}>{deleteDec(price_change_percentage_30d_in_currency, 2)}%</h2>
+                    </div>
                 </div>
 
                 <div className="graphic">

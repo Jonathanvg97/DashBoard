@@ -6,7 +6,7 @@
     padding: 20px 30px 30px;
     border-radius: 10px;
     width: 85%;
-    margin: 5vh auto;
+    margin: 60% auto 0 auto;
   }
   
   .contenedor h2 {
@@ -17,11 +17,12 @@
   .input-convert {
     display: grid;
     gap: 10px;
-    grid: 40px / 3fr 1fr 3fr;
+    grid: 1fr;
+    /* grid: 40px / 3fr 1fr 3fr; */
   }
   
   .contenedor input {
-    position: absolute;
+    /* position: absolute; */
     border-radius: 5px;
     width: 100%;
     appearance: none;
@@ -53,16 +54,18 @@
     text-transform: uppercase;
     inset: 0;
     margin: auto;
-    font-size: 1.4rem;
+    font-size: 10px;
     padding-left: 55px;
   }
   
   option{
-    font-size: .6rem;
+    font-size: 12px;
   }
+
   select::-ms-expand {
     display: none;
   }
+
   .select {
     position: absolute;
     display: flex;
@@ -73,10 +76,13 @@
     margin:auto;
     margin-right: 0;
   }
+
   .input{
     position: relative;
     width: 100%;
+    height: 100%;
   }
+
   .select img{
     position: absolute;
     width: 30px;
@@ -87,10 +93,11 @@
     margin-left: 15px;
     z-index: 10;
   }
+
   .select::after {
     content: "\25BC";
     position: absolute;
-    width: 15px;
+    width: 5px;
     height: 50%;
     inset: 0;
     margin: auto;
@@ -108,4 +115,5 @@
   
   .icono {
     place-self: center;
+    margin: 15px 0;
   }

@@ -1,6 +1,13 @@
 import React from 'react'
 import './Footer.css'
+import LogoAlejandro from './img/LogoAlejandro.svg'
+import LogoAndres from './img/LogoAndres.svg'
 import LogoAngela from './img/LogoAngela.svg'
+import LogoBrayan from './img/LogoBrayan.svg'
+import LogoCamila from './img/LogoCamila.svg'
+import LogoDylan from './img/LogoDruck.jpeg'
+import LogoJesus from './img/LogoJesus.svg'
+import LogoNicolas from './img/LogoNicolas.svg'
 
 export default function Footer() {
   return (
@@ -19,7 +26,14 @@ export default function Footer() {
           <p>Developed by</p>
 
           <div>
+            <img src={LogoAndres} alt="Logo Andres" />
+            <img src={LogoCamila} alt="Logo Camila" />
+            <img src={LogoJesus} alt="Logo Jesus" />
+            <img src={LogoBrayan} alt="Logo Brayan" />
+            <img src={LogoAlejandro} alt="Logo Alejandro" />
             <img src={LogoAngela} alt="Logo Angela" />
+            <img src={LogoNicolas} alt="Logo Nicolas" />
+            <img src={LogoDylan} alt="Logo Dylan" />
           </div>
         </div>
       </div>
