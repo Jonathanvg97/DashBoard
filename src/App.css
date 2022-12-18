@@ -20,7 +20,7 @@ main{
 
 @media (min-width: 768px) { 
     main {
-        grid: 1fr / 1fr 1fr;
+        grid: 2fr / 1fr 1fr;
     }
 }
 
@@ -28,9 +28,14 @@ main{
     width: 90%;
     height: 509px;
     display: grid;
-    grid: repeat(3,1fr) / 1fr;
     align-self: stretch;
     gap: 20px;
+}
+
+@media (min-width: 1440px) { 
+    .cards_con {
+        width: 50%;
+    }
 }
 .green, .red{
     font-weight: bold;

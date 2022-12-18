@@ -18,7 +18,26 @@
     display: grid;
     gap: 10px;
     grid: 1fr;
-    /* grid: 40px / 3fr 1fr 3fr; */
+  }
+
+  @media (min-width: 768px) { 
+    .contenedor {
+      margin: 25% auto 0 auto;
+    }
+
+    .input-convert {
+      grid: 40px / 3fr 1fr 3fr;
+    }
+  }
+  
+  @media (min-width: 1440px) { 
+    .contenedor {
+      margin: 15% auto 0 auto;
+    }
+
+    select {
+      font-size: 16px;
+    }
   }
   
   .contenedor input {
