@@ -61,7 +61,7 @@ function App() {
   // Este estado cargara la información cuando el componente este listo
   useEffect(() => {
     getData();
-  }, []);
+  }, []); 
 
   // Este estado cargará la información cuando seleccionemos una nueva divisa
   useEffect(() => {

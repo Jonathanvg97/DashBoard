@@ -8,6 +8,7 @@ import LogoCamila from './img/LogoCamila.svg'
 import LogoDylan from './img/LogoDruck.jpeg'
 import LogoJesus from './img/LogoJesus.svg'
 import LogoNicolas from './img/LogoNicolas.svg'
+import LogoJonathan from './img/MarcaPersonal.png'
 
 export default function Footer() {
   return (
@@ -33,6 +34,7 @@ export default function Footer() {
             <img src={LogoAlejandro} alt="Logo Alejandro" />
             <img src={LogoAngela} alt="Logo Angela" />
             <img src={LogoNicolas} alt="Logo Nicolas" />
+            <img src={LogoJonathan} alt="Logo Jonathan" style={{width:"60px"}}/>
             <img src={LogoDylan} alt="Logo Dylan" />
           </div>
         </div>
